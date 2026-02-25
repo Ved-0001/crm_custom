@@ -1,40 +1,38 @@
-/* =====================================================
-   COMPLETE SALESFORCE LIGHTNING UI – FRAPPE v15
-   ===================================================== */
+/* ============================================
+   SALESFORCE STYLE UI - PINK VERSION
+   FOR FRAPPE v15
+   ============================================ */
 
 :root {
-    --sf-blue: #0176d3;
-    --sf-bg: #f4f6f9;
-    --sf-border: #e5e5e5;
-    --sf-hover: #e8f3ff;
+    --primary: #e91e63;        /* Pink */
+    --bg-soft: #fff0f5;
+    --border-soft: #f8bbd0;
+    --hover-soft: #fde4ef;
 }
 
-/* ================= GLOBAL ================= */
-
+/* GLOBAL */
 body {
-    font-family: "Segoe UI", "Salesforce Sans", sans-serif;
+    background: var(--bg-soft) !important;
+    font-family: "Segoe UI", sans-serif;
     font-size: 14px;
-    background: var(--sf-bg);
 }
 
 .layout-main-section {
-    background: var(--sf-bg) !important;
+    background: var(--bg-soft) !important;
     padding: 20px !important;
 }
 
-/* ================= NAVBAR ================= */
-
+/* NAVBAR */
 .navbar {
-    background-color: var(--sf-blue) !important;
+    background: var(--primary) !important;
     height: 70px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 /* Center Logo */
 .navbar .container {
     display: flex !important;
-    align-items: center !important;
     justify-content: center !important;
+    align-items: center !important;
     position: relative;
 }
 
@@ -46,57 +44,46 @@ body {
 
 .navbar-brand img {
     height: 65px !important;
-    width: auto !important;
 }
 
-/* Search */
+/* SEARCH BAR */
 .navbar .search-bar input {
     border-radius: 25px !important;
     background: white !important;
     border: none !important;
-    padding-left: 15px !important;
 }
 
-/* ================= SIDEBAR ================= */
-
+/* SIDEBAR */
 .layout-side-section {
     background: white !important;
-    border-right: 1px solid var(--sf-border);
-    width: 250px !important;
-    padding-top: 15px;
+    border-right: 1px solid var(--border-soft);
+    width: 240px !important;
 }
 
 .standard-sidebar-item {
     border-radius: 8px;
-    margin: 4px 10px;
+    margin: 5px 10px;
     padding: 8px 12px;
-    font-weight: 500;
-    transition: 0.2s ease;
 }
 
 .standard-sidebar-item:hover {
-    background: var(--sf-hover) !important;
-    color: var(--sf-blue) !important;
+    background: var(--hover-soft) !important;
+    color: var(--primary) !important;
 }
 
 .standard-sidebar-item.selected {
-    background: var(--sf-blue) !important;
+    background: var(--primary) !important;
     color: white !important;
 }
 
-.sidebar-label {
-    display: none !important;
-}
-
-/* ================= RECORD HEADER ================= */
-
+/* RECORD HEADER */
 .page-head {
-    background: white;
-    border-radius: 16px;
-    padding: 20px 25px;
+    background: white !important;
+    border-radius: 14px;
+    padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    border-left: 6px solid var(--sf-blue);
+    border-left: 6px solid var(--primary);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
 .page-head h3 {
@@ -104,70 +91,48 @@ body {
     font-weight: 600;
 }
 
-/* Status Badge */
+/* STATUS BADGE */
 .indicator {
-    border-radius: 30px !important;
+    border-radius: 25px !important;
     padding: 5px 14px !important;
     font-weight: 600 !important;
 }
 
-/* ================= HORIZONTAL TABS ================= */
-
+/* HORIZONTAL TABS */
 .nav-tabs {
     display: flex !important;
     flex-direction: row !important;
-    border-bottom: 1px solid var(--sf-border);
-    margin-bottom: 20px !important;
-}
-
-.nav-tabs .nav-item {
-    margin-right: 10px;
+    border-bottom: 1px solid var(--border-soft);
 }
 
 .nav-tabs .nav-link {
     border-radius: 8px !important;
-    font-weight: 500;
     padding: 8px 16px !important;
 }
 
 .nav-tabs .nav-link.active {
-    background: var(--sf-blue) !important;
+    background: var(--primary) !important;
     color: white !important;
 }
 
-/* ================= FORM CARDS ================= */
-
+/* FORM CARDS */
 .form-section {
     background: white !important;
-    border-radius: 16px;
+    border-radius: 14px;
     padding: 22px;
     margin-bottom: 25px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
-.section-head {
-    font-weight: 600 !important;
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-/* ================= FIELDS ================= */
-
+/* FIELDS */
 .form-control {
     border-radius: 8px !important;
-    border: 1px solid var(--sf-border) !important;
-    padding: 8px 10px !important;
+    border: 1px solid var(--border-soft) !important;
 }
 
-.control-label {
-    font-weight: 500 !important;
-    margin-bottom: 5px;
-}
-
-/* ================= BUTTONS ================= */
-
+/* BUTTONS */
 .btn-primary {
-    background-color: var(--sf-blue) !important;
+    background: var(--primary) !important;
     border-radius: 8px !important;
     border: none !important;
 }
@@ -176,17 +141,10 @@ body {
     border-radius: 8px !important;
 }
 
-/* ================= TIMELINE ================= */
-
+/* TIMELINE */
 .timeline-item {
+    background: white !important;
     border-radius: 12px;
-    background: white;
     padding: 14px;
-    margin-bottom: 12px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
-/* Smooth feel */
-* {
-    transition: all 0.15s ease-in-out;
 }

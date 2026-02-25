@@ -27,13 +27,11 @@ app_license = "mit"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/crm_custom/css/crm_custom.css"
 # app_include_js = "/assets/crm_custom/js/crm_custom.js"
-
-# Include global JS in Desk
+# Include global JS in Desk 
 app_include_js = [
-    "/assets/crm_custom/js/timeline_override.js",
-    "/assets/crm_custom/js/lightning_record.js",
-    "/assets/crm_custom/js/sidebar_toggle.js"
+    "/assets/crm_custom/js/timeline_override.js"
 ]
+# Include global JS in Desk
 app_include_css = [
     "/assets/crm_custom/css/crm_custom.css",
     "/assets/crm_custom/css/salesforce_ui.css",

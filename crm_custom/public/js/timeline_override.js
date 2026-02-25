@@ -1,16 +1,13 @@
-// Override Timeline to show exact timestamp instead of relative time
+// GLOBAL override to disable relative time in Frappe v15
 
-frappe.ui.form.Timeline = class CustomTimeline extends frappe.ui.form.Timeline {
-    render_timeline_items() {
-        super.render_timeline_items();
+frappe.ready(function () {
 
-        setTimeout(() => {
-            document.querySelectorAll(".frappe-timestamp").forEach(el => {
-                const dt = el.getAttribute("data-timestamp");
-                if (dt) {
-                    el.innerText = frappe.datetime.str_to_user(dt);
-                }
-            });
-        }, 300);
+    if (window.moment) {
+        const originalFromNow = moment.fn.fromNow;
+
+        moment.fn.fromNow = function () {
+            return this.format("DD-MM-YYYY hh:mm A");
+        };
     }
-};
+
+});
