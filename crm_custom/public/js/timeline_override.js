@@ -1,13 +1,12 @@
-// GLOBAL override to disable relative time in Frappe v15
-
 frappe.ready(function () {
 
-    if (window.moment) {
-        const originalFromNow = moment.fn.fromNow;
+    // Override global relative time formatter (v15 compatible)
+    if (frappe.utils && frappe.utils.formatters) {
 
-        moment.fn.fromNow = function () {
-            return this.format("DD-MM-YYYY hh:mm A");
+        frappe.utils.formatters.format_relative = function (value) {
+            return frappe.datetime.str_to_user(value);
         };
+
     }
 
 });

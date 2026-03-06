@@ -38,7 +38,6 @@ app_include_css = [
     "/assets/crm_custom/css/desk_override.css"
  ]
 
-
 # include js, css files in header of web template
 # web_include_css = "/assets/crm_custom/css/crm_custom.css"
 # web_include_js = "/assets/crm_custom/js/crm_custom.js"
@@ -257,4 +256,3 @@ app_include_css = [
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-
