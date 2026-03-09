@@ -147,13 +147,11 @@ app_include_css = [
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "Lead": {
+        "before_insert": "crm_custom.api.lead_validation.validate_salesforce_duplicate"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
